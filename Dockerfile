@@ -3,7 +3,7 @@
 FROM golang:1.16-alpine
 
 ARG IMAGE_TAG=untagged
-ENV IMAGE_TAG=$IMAGE_TAG
+ENV IMAGE_TAG=${IMAGE_TAG}
 
 WORKDIR /app
 COPY go.mod ./
