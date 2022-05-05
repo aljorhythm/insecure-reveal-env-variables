@@ -21,8 +21,7 @@ endif
 REPO_IMAGE_FULL_TAG := $(IMAGE_REPO)/$(IMAGE_FULL_TAG)
 
 image-build:
-	echo $(TAG)
-	docker build . --tag $(IMAGE_COMMIT_TAG)
+	docker build . --tag $(IMAGE_COMMIT_TAG) 
 
 image-push:
 	docker tag $(IMAGE_COMMIT_TAG) $(REPO_IMAGE_COMMIT_TAG)

@@ -2,7 +2,8 @@
 
 FROM golang:1.16-alpine
 
-ENV DUMMY_KEY=dummy_value
+ARG IMAGE_TAG=untagged
+ENV IMAGE_TAG=$IMAGE_TAG
 
 WORKDIR /app
 COPY go.mod ./
