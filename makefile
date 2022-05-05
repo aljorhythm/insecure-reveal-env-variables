@@ -22,5 +22,7 @@ image-build:
 
 image-push:
 	docker tag $(IMAGE_COMMIT_TAG) $(REPO_IMAGE_COMMIT_TAG)
+	docker push $(REPO_IMAGE_COMMIT_TAG)
+	
 	docker tag $(IMAGE_COMMIT_TAG) $(REPO_IMAGE_FULL_TAG)
-	docker push $(REPO_IMAGE_TAG)
+	docker push $(REPO_IMAGE_FULL_TAG)
