@@ -5,9 +5,9 @@ IMAGE := insecure-reveal-env-variables
 IMAGE_REPO := aljorhythm
 
 ifndef CI
-	IMAGE_COMMIT_TAG := $(IMAGE):$(GIT_SHA)
-else
 	IMAGE_COMMIT_TAG := $(IMAGE):NOT_CI
+else
+	IMAGE_COMMIT_TAG := $(IMAGE):$(GIT_SHA)
 endif
 
 REPO_IMAGE_COMMIT_TAG := $(IMAGE_REPO)/$(IMAGE_COMMIT_TAG)
