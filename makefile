@@ -17,5 +17,5 @@ image-build:
 	docker build . --tag $(IMAGE_TAG)
 
 image-push:
-	docker tag $(IMAGE_REPO) $(REPO_IMAGE_TAG)
+	docker tag $(IMAGE_TAG) $(REPO_IMAGE_TAG)
 	docker push $(REPO_IMAGE_TAG)
