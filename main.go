@@ -17,7 +17,7 @@ func main() {
 		dict[key] = value
 	}
 
-	dict["ON THE BEACH"] = "FUN"
+	dict["ON THE BEACH"] = "DEMO SHOWCASE!!"
 
 	http.HandleFunc("/", func(writer http.ResponseWriter, request *http.Request) {
 		writer.Header().Set("Content-Type", "application/json")
