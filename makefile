@@ -20,6 +20,9 @@ endif
 
 REPO_IMAGE_FULL_TAG := $(IMAGE_REPO)/$(IMAGE_FULL_TAG)
 
+run:
+	go run .
+
 image-build:
 	docker build . --tag $(IMAGE_COMMIT_TAG) --build-arg IMAGE_TAG=${IMAGE_COMMIT_TAG}
 
